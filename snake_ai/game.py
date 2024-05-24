@@ -18,7 +18,8 @@ BLOCK_SIZE = 20
 SPEED = 100
 
 pygame.init()
-font = pygame.font.SysFont('Arial', 24)
+#font = pygame.font.SysFont('Arial', 24)
+font = pygame.font.Font('Arial.ttf', 25)
 
 class Direction(Enum):
     """Enum to represent direction of the snake"""
@@ -174,6 +175,9 @@ class SnakeGameAI:
             reward += 2.0
         else:
             reward -= 0.1
+
+
+
         # Update UI and clock
         self._update_ui()
         self.clock.tick(SPEED)

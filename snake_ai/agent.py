@@ -46,11 +46,13 @@ class DQNAgent:
         self.memory.append((state, action, reward, next_state, done))
     
     def _get_action_vector(self, action_index: int) -> np.ndarray:
+        """Get the action vector from the action index"""
         action_vector = np.zeros(ACTION_SPACE_SIZE)
         action_vector[action_index] = 1
         return action_vector
     
     def _get_action_index(self, action_vector: np.ndarray) -> int:
+        """Get the index of the action in the action vector"""
         return np.argmax(action_vector)
     
     def act(self, state: np.ndarray) -> np.ndarray:
@@ -102,6 +104,7 @@ class DQNAgent:
         print(f"Loaded model from {self.model_path}")
 
 def train_agent():
+    """Train the agent"""
     game = SnakeGameAI()
     agent = DQNAgent()
     episodes = 2000
@@ -132,7 +135,6 @@ def train_agent():
         loss = agent.replay()
         losses.append(loss)
         print(f'Average Loss: {np.mean(losses)}')
-
-# if cmd argument is train, train model, else load the existing model and run    
+   
 if __name__ == '__main__':
     train_agent()
