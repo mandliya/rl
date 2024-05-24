@@ -44,3 +44,19 @@ The agent will learn to play the game by updating the Q-values based on the rewa
 
 ### Training in Action
 ![Snake Game](assets/snake_agent.gif)
+
+## Running the Code
+To run the code, install the required dependencies using the following command:
+
+```bash
+# create a virtual environment
+python3 -m venv snake_env
+source snake_env/bin/activate
+pip install -r requirements.txt
+```
+
+Then, run the following command to train the agent:
+
+```bash
+python agent.py
+```
