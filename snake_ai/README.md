@@ -42,3 +42,5 @@ The neural network will take the state space as input and output the Q-values fo
 
 The agent will learn to play the game by updating the Q-values based on the rewards it receives and the Q-values it learns from the neural network. The agent will use experience replay to store and sample experiences from its memory to update the Q-values more efficiently.
 
+### Training in Action
+[![Snake Game](assets/snake_agent.gif)
