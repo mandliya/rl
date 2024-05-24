@@ -18,8 +18,7 @@ BLOCK_SIZE = 20
 SPEED = 100
 
 pygame.init()
-#font = pygame.font.SysFont('Arial', 24)
-font = pygame.font.Font('Arial.ttf', 25)
+font = pygame.font.SysFont('Arial', 24)
 
 class Direction(Enum):
     """Enum to represent direction of the snake"""
